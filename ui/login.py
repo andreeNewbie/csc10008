@@ -2,14 +2,12 @@ from PyQt6 import uic
 from PyQt6.QtWidgets import *
 
 from .components import Success_w
-
 from db import user_col as User
-
 class Login_w(QMainWindow):
     def __init__ (self):
         super(Login_w, self).__init__()
         uic.loadUi("templates/login.ui", self)
-        
+        self.loginButton.clicked.connect(self.login)
     def login(self):
         name = self.userName.text()
         pw = self.userPassword.text()
