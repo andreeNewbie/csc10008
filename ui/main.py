@@ -7,7 +7,8 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-import main
+
+from .login import Login_w
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -63,6 +64,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         self.loginButton.clicked.connect(self.handleLogin)
+
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
@@ -71,15 +74,8 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "Password:"))
         self.loginButton.setText(_translate("MainWindow", "LOGIN"))
         self.SignUpButton.setText(_translate("MainWindow", "SIGN UP"))
-    def handleLogin(self):
-        loginWindow = main.Login_w()
-        loginWindow.login()
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec())
+        
+    def handleLogin(self):
+        loginWindow = Login_w()
+        loginWindow.login()
