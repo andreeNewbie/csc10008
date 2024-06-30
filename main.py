@@ -9,12 +9,13 @@ load_dotenv()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    widget = QStackedWidget() #allow multiple windows to be managed
-
+    # allow multiple windows to be managed
+    widget = QStackedWidget()
     widget.addWidget(Login_w())
     widget.addWidget(SignUp_w())
     widget.addWidget(Success_w())
-    widget.setCurrentIndex(0) #set the current (default) first added (login_w)
+    # set the current (default) first added (login_w)
+    widget.setCurrentIndex(0)
     widget.setFixedHeight(500)
     widget.setFixedWidth(700)
     widget.show()

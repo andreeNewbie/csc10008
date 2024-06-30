@@ -1,3 +1,3 @@
-from .login import *
-from .sign_up import *
-from .components import *
+from .login import Login_w
+from .sign_up import SignUp_w
+from .components import Success_w
