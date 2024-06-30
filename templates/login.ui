@@ -107,17 +107,22 @@
      <string>LOGIN</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="SignUpButton">
+   <widget class="QPushButton" name="signUpButton">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>350</y>
-      <width>93</width>
-      <height>28</height>
+      <x>230</x>
+      <y>340</y>
+      <width>251</width>
+      <height>31</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>SIGN UP</string>
+     <string>SIGN UP FOR NEW ACCOUNT</string>
     </property>
    </widget>
   </widget>

@@ -1,6 +1,6 @@
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox, QMainWindow
-from .components import Success_w
+
 from db import user_col as User
 
 
@@ -15,7 +15,7 @@ class Login_w(QMainWindow):
         pw = self.userPassword.text()
         data = {"name": name, "passWord": pw}
         if User.find_one(data):
-            Success_w().show()
+            self.show_success_window()
         else:
             # Show error window for incorrect credentials
             self.show_error_window()
@@ -26,3 +26,10 @@ class Login_w(QMainWindow):
         error_dialog.setText("USER OR PASSWORD IS WRONG TRY AGAIN!")
         error_dialog.setWindowTitle("Login Error")
         error_dialog.exec()
+
+    def show_success_window(self):
+        success_dialog = QMessageBox()
+        success_dialog.setIcon(QMessageBox.Icon.Information)
+        success_dialog.setText("LOGIN SUCCESS !!!")
+        success_dialog.setWindowTitle("Notification")
+        success_dialog.exec()
