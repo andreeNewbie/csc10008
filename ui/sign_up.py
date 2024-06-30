@@ -16,7 +16,7 @@ class SignUp_w(QMainWindow):
         if User.find_one({"name": name}):
             self.show_error_name_window()
         else:
-            data = {"name": name, "passWord": pw}
+            data = {"name": name, "password": pw}
             User.insert_one(data)
             self.show_success_window()
             self.newUserName = ""

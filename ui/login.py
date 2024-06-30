@@ -13,17 +13,18 @@ class Login_w(QMainWindow):
     def login(self):
         name = self.userName.text()
         pw = self.userPassword.text()
-        data = {"name": name, "passWord": pw}
+        data = {"name": name, "password": pw}
         if User.find_one(data):
             self.show_success_window()
+            self.userName = ""
+            self.userPassword = ""
         else:
-            # Show error window for incorrect credentials
             self.show_error_window()
 
     def show_error_window(self):
         error_dialog = QMessageBox()
         error_dialog.setIcon(QMessageBox.Icon.Warning)
-        error_dialog.setText("USER OR PASSWORD IS WRONG TRY AGAIN!")
+        error_dialog.setText("LOGIN FAIL !!!")
         error_dialog.setWindowTitle("Login Error")
         error_dialog.exec()
 

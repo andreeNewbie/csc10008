@@ -9,7 +9,7 @@
             "python.pythonPath": "venv/Scripts/python.exe",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/main.py",
+            "program": "${workspaceFolder}/client.py",
             "console": "integratedTerminal"
         }
     ]
