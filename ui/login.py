@@ -1,10 +1,13 @@
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox, QMainWindow
+from PyQt6.QtCore import pyqtSignal
 
 from db import user_col as User
 
 
 class Login_w(QMainWindow):
+    login_successful = pyqtSignal()
+
     def __init__(self):
         super(Login_w, self).__init__()
         uic.loadUi("templates/login.ui", self)
@@ -16,8 +19,7 @@ class Login_w(QMainWindow):
         data = {"name": name, "password": pw}
         if User.find_one(data):
             self.show_success_window()
-            self.userName = ""
-            self.userPassword = ""
+            self.login_successful.emit()
         else:
             self.show_error_window()
 

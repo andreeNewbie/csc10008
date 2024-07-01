@@ -15,12 +15,12 @@ class SignUp_w(QMainWindow):
         pw = self.newUserPassword.text()
         if User.find_one({"name": name}):
             self.show_error_name_window()
+            self.userName = ""
+            self.userPassword = ""
         else:
             data = {"name": name, "password": pw}
             User.insert_one(data)
             self.show_success_window()
-            self.newUserName = ""
-            self.newUserPassword = ""
 
     def show_error_name_window(self):
         error_name = QMessageBox()
