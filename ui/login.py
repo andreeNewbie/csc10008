@@ -12,7 +12,6 @@ class Login_w(QMainWindow):
         super(Login_w, self).__init__()
         uic.loadUi("templates/login.ui", self)
         self.loginButton.clicked.connect(self.login)
-        self.setWindowFlags()
 
     def login(self):
         name = self.userName.text()
