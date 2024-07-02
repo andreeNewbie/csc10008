@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
     stack_widget.setCurrentIndex(0)
     stack_widget.setFixedHeight(600)
-    stack_widget.setFixedWidth(800)
+    stack_widget.setFixedWidth(750)
     stack_widget.show()
 
     sys.exit(app.exec())
