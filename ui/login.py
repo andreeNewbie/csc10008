@@ -11,7 +11,6 @@ class Login_w(QMainWindow):
     def __init__(self):
         super(Login_w, self).__init__()
         uic.loadUi("templates/login.ui", self)
-        self.titleBar.raise_()
         self.loginButton.clicked.connect(self.login)
         self.setWindowFlags()
 
