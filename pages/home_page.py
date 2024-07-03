@@ -16,7 +16,21 @@ class HomePage_w(QMainWindow):
         dialog_success = dialog.exec()
 
         if dialog_success == 1:
-            selected_file = dialog.selectedFiles()
-            print("Selected file: ", selected_file)
-        else:
-            print("User canceled opening the file dialog")
+            selected_file_path = dialog.selectedFiles()
+            file_name = self.getName(selected_file_path[0])
+            self.fileName.setText(file_name)
+
+    def getName(self, selected_file_path):
+        index = 0
+        cnt = len(selected_file_path) - 1
+        file_name = ""
+        while cnt >= 0:
+            if selected_file_path[cnt] == "/":
+                index = cnt + 1
+                break
+            cnt -= 1
+
+        while index < len(selected_file_path):
+            file_name += selected_file_path[index]
+            index += 1
+        return file_name

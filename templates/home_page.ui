@@ -37,7 +37,7 @@
    <widget class="QPushButton" name="chooseFileButton">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>130</x>
       <y>430</y>
       <width>131</width>
       <height>41</height>
@@ -164,22 +164,19 @@
    <widget class="QLineEdit" name="fileName">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>430</y>
-      <width>231</width>
+      <x>282</x>
+      <y>431</y>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>11</pointsize>
      </font>
     </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
     <property name="text">
-     <string>            Enter file's name</string>
+     <string/>
     </property>
    </widget>
   </widget>

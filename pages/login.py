@@ -2,9 +2,9 @@ from PyQt6 import uic
 from PyQt6.QtWidgets import QMessageBox, QMainWindow
 from PyQt6.QtCore import pyqtSignal
 
-import db
+from db import connect_database
 
-ignore_message, User = db.connect_database()
+ignore_message, User = connect_database()
 
 
 class Login_w(QMainWindow):
