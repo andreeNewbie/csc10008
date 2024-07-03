@@ -1,10 +1,23 @@
-# Google Drive Simulation
+# Instruction to run
+Install Python 3.12.4
 
-This project simulates Google Drive using Socket programming to store and download files. This project is carried out as part of the Computer Networks course.
+Create virtual env to run python:
+```
+python -m venv venv
+```
 
-## Author
-- **Name:** Phan Nhut Anh, Nguyen Thi Tra My, Nguyen Dinh Thai Hung
+Activate virtual env:
+```
+pip install -r requirements.txt
+```
 
-## Introduction
 
-The goal of this project is to build a simple system similar to Google Drive, where users can upload, download, view, and delete files. This system is developed using Node.js and utilizes Socket.IO to handle communication between the client and server.
+Create file .env, and add config to it:
+```
+MONGODB_URL=<MONGODB server url>
+```
+
+Run this command:
+```
+python main.py
+```
