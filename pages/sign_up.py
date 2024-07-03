@@ -1,10 +1,13 @@
 from PyQt6 import uic
 from PyQt6.QtWidgets import QMainWindow, QMessageBox
 
-from db import user_col as User
+import db
+
+ignore_message, User = db.connect_database()
 
 
 class SignUp_w(QMainWindow):
+
     def __init__(self):
         super(SignUp_w, self).__init__()
         uic.loadUi("templates/sign_up.ui", self)

@@ -1,12 +1,16 @@
 import os
 import pymongo
 
+user_col = None
 
-# check if connect to database or not
-try:
-    myClient = pymongo.MongoClient(os.getenv("MONGODB_URL"))
-    db = myClient["send_file_project"]
-    user_col = db["users"]
-    print("Connected to MongoDB successfully!")
-except pymongo.errors.ConnectionFailure as e:
-    print(f"Failed to connect to MongoDB: {e}")
+
+def connect_database():
+    global user_col
+
+    try:
+        myClient = pymongo.MongoClient(os.getenv("MONGODB_URL"))
+        db = myClient["send_file_project"]
+        user_col = db["users"]
+        return "Connected to MongoDB successfully!", user_col
+    except pymongo.errors.ConnectionFailure as e:
+        return "Failed to connect to MongoDB", None
