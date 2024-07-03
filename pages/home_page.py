@@ -3,6 +3,7 @@ from PyQt6.QtWidgets import QMainWindow, QFileDialog
 
 
 class HomePage_w(QMainWindow):
+
     def __init__(self):
         super(HomePage_w, self).__init__()
         uic.loadUi("templates/home_page.ui", self)
@@ -16,6 +17,6 @@ class HomePage_w(QMainWindow):
 
         if dialog_success == 1:
             selected_file = dialog.selectedFiles()
-            print(selected_file)
+            print("Selected file: ", selected_file)
         else:
             print("User canceled opening the file dialog")

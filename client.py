@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import sys
 from PyQt6.QtWidgets import QApplication, QStackedWidget
 
-from ui import Login_w, SignUp_w, HomePage_w
+from pages import Login_w, SignUp_w, HomePage_w
 
 load_dotenv()
 

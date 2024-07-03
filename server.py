@@ -16,6 +16,5 @@ conn, addr = server_socket.accept()
 print("client address: ", addr)
 print("CONN: ", conn.getsockname())
 
-
 input()
 conn.close()
