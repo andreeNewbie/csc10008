@@ -102,16 +102,6 @@
      </rect>
     </property>
    </widget>
-   <widget class="QListView" name="listView_2">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>110</y>
-      <width>271</width>
-      <height>261</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
@@ -143,24 +133,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>90</y>
-      <width>311</width>
-      <height>301</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="title">
-     <string>DOWNLOAD FILES</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="fileName">
     <property name="geometry">
      <rect>
@@ -178,6 +150,34 @@
     <property name="text">
      <string/>
     </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>90</y>
+      <width>321</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>DOWNLOAD FILES</string>
+    </property>
+    <widget class="QListView" name="listView_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>291</width>
+       <height>261</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
