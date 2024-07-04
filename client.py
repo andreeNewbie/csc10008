@@ -13,7 +13,13 @@ PORT = 3000
 
 print("CLIENT SIDE: ")
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect((HOST, PORT))
+
+try:
+    client_socket.connect((HOST, PORT))
+except:
+    client_socket.close()
+    sys.exit()
+
 print("Client", HOST, client_socket.getsockname())
 
 
