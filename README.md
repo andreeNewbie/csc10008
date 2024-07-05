@@ -1,4 +1,4 @@
-# Instruction to run
+# Instruction to run  client
 Install Python 3.12.4
 
 Create virtual env to run python:
@@ -19,5 +19,5 @@ MONGODB_URL=<MONGODB server url>
 
 Run this command:
 ```
-python main.py
+python client.py
 ```
