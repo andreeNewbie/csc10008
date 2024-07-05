@@ -1,7 +1,7 @@
 import socket
+import sys
 
 from dotenv import load_dotenv
-import sys
 from PyQt6.QtWidgets import QApplication, QStackedWidget
 
 from pages import login, sign_up, home_page
@@ -11,16 +11,18 @@ load_dotenv()
 HOST = "127.0.0.1"  # localhost
 PORT = 3000
 
+
 print("CLIENT SIDE: ")
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+
 try:
     client_socket.connect((HOST, PORT))
+    print("Client: {}".format(client_socket.getsockname()))
 except:
+    print("Connect fail! ERROR")
     client_socket.close()
     sys.exit()
-
-print("Client", HOST, client_socket.getsockname())
 
 
 if __name__ == "__main__":
