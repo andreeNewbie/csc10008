@@ -24,6 +24,7 @@ class Server:
     def connect(self, conn, addr):
         print("client address: ", addr)
         print("CONN: ", conn.getsockname())
+        input()
         print("Disconnect client", len(clients_list))
         conn.close()
         clients_list.remove(threading.current_thread())
